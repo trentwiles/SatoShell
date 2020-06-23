@@ -32,6 +32,7 @@ namespace l {
         cout << "Waiting for connection in port " << rand() % 10000 + 1000 << "\n";
         cout << "Error, the status code of " << rand() % 600 + 100 << " was returned. Press ENTER to try again. \n";
         cin >> nothing;
+        cout << "Waiting for connection in port " << rand() % 10000 + 1000 << "\n";
         return 0;
     }
 }
