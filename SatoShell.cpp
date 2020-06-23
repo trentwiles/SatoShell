@@ -19,6 +19,7 @@ using namespace std;
 // Namespaces that hold functions:
 
 namespace l {
+    string nothing;
     int show(){
     cout << "SEE: www.apache.org/licenses/LICENSE-2.0.txt \n";
     return 0;
@@ -30,7 +31,7 @@ namespace l {
     int view() {
         cout << "Waiting for connection in port " << rand() % 10000 + 1000 << "\n";
         cout << "Error, the status code of " << rand() % 600 + 100 << " was returned. Press ENTER to try again. \n";
-        cin_ignore;
+        cin >> nothing;
         return 0;
     }
 }
