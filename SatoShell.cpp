@@ -20,6 +20,7 @@ using namespace std;
 
 namespace l {
     string nothing;
+    int isView;
     int show(){
     cout << "SEE: www.apache.org/licenses/LICENSE-2.0.txt \n";
     return 0;
@@ -34,6 +35,16 @@ namespace l {
         cin >> nothing;
         cout << "Waiting for connection in port " << rand() % 10000 + 1000 << "\n";
         cout << "Connection Established. \n \n Ready to view SQL records. \n";
+        isView = 1;
+        return 0;
+    }
+    int record() {
+        if (isView == 1) {
+            cout << "SQL Viewer connected on port " << rand() % 10000 + 1000 << " \n";
+        }
+        else {
+            cout << "ERR: No connection established. Do this by running 'view'.  \n";
+        }
         return 0;
     }
 }
@@ -68,6 +79,12 @@ namespace general {
         }
         else if (q == "view") {
             l::view();
+        }
+        else if (q == "record") {
+            l::record();
+        }
+        else {
+            cout << "'" << q << "' is not a valid command. \n";
         }
         return 0;
     }
