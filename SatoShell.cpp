@@ -41,6 +41,8 @@ namespace l {
     int record() {
         if (isView == 1) {
             cout << "SQL Viewer connected on port " << rand() % 10000 + 1000 << " \n";
+            cout << "Type 'ok' to scan records. \n";
+            cin;
         }
         else {
             cout << "ERR: No connection established. Do this by running 'view'.  \n";
