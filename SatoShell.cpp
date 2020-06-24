@@ -30,11 +30,10 @@ namespace l {
     }
     int view() {
         cout << "Waiting for connection in port " << rand() % 10000 + 1000 << "\n";
-        cout << "Error, the status code of " << rand() % 600 + 100 << " was returned. Press Z to try again. \n";
+        cout << "Error, the status code of " << rand() % 600 + 100 << " was returned. Press A to try again. \n";
         cin >> nothing;
         cout << "Waiting for connection in port " << rand() % 10000 + 1000 << "\n";
-        cin >> nothing;
-        cout << "Waiting for connection in port " << rand() % 10000 + 1000 << "\n";
+        cout << "Connection Established. \n \n Ready to view SQL records. \n";
         return 0;
     }
 }
