@@ -80,7 +80,7 @@ namespace general {
 
     int asklogic() {
         string q;
-        cout << "Admin >";
+        cout << "Admin>";
         cin >> q;
         if (q == "licence") {
             l::show();
