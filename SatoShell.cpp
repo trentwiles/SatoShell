@@ -13,6 +13,7 @@
 #include <windows.h>
 #include <Lmcons.h>
 #include <stdlib.h>
+#include "copyright.h"
 
 using namespace std;
 
@@ -21,6 +22,7 @@ using namespace std;
 namespace l {
     string nothing;
     int isView;
+    int number;
     int show(){
     cout << "SEE: www.apache.org/licenses/LICENSE-2.0.txt \n";
     return 0;
@@ -40,9 +42,15 @@ namespace l {
     }
     int record() {
         if (isView == 1) {
-            cout << "SQL Viewer connected on port " << rand() % 10000 + 1000 << " \n";
+            int port = rand() % 10000 + 1000;
+            cout << "SQL Viewer connected on port " << port << " \n";
             cout << "Type 'ok' to scan records. \n";
             cin;
+            while (200 > number) {
+                cout << "Preparing to connect to SQL server on port << " << port;
+                cout << "Collecting data " << rand() % 10000 + 1000 << " bytes reviewed. \n \n";
+                number = number + 1;
+            }
         }
         else {
             cout << "ERR: No connection established. Do this by running 'view'.  \n";
@@ -56,7 +64,7 @@ namespace general {
     int welcome() {
         cout << "\n";
         cout << "(c) 2020 Riverside Rocks. All rights reserved.\n";
-        cout << "Sato Shell / RCommand [v0.1]\n";
+        cout << "Sato Shell / RCommand [v0.1.1]\n";
         cout << "For help, type help. For license details, please type licence.";
         return 0;
     }
