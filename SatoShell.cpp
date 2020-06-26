@@ -93,6 +93,9 @@ namespace general {
         else if (q == "record") {
             l::record();
         }
+        else if (q == "version") {
+            version(1, 3, 5);
+        }
         else {
             cout << "'" << q << "' is not a valid command. \n";
         }

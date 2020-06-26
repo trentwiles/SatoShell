@@ -1,3 +1,3 @@
 #pragma once
 
-int port(rand() % 10000 + 1000);
+int version(int a, int b, int c);
