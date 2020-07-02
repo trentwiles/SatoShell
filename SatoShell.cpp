@@ -13,7 +13,6 @@
 #include <windows.h>
 #include <Lmcons.h>
 #include <stdlib.h>
-#include "copyright.h"
 
 using namespace std;
 
@@ -46,9 +45,8 @@ namespace l {
             cout << "SQL Viewer connected on port " << port << " \n";
             cout << "Type 'ok' to scan records. \n";
             cin;
-            while (200 > number) {
-                cout << "Preparing to connect to SQL server on port << " << port;
-                cout << "Collecting data " << rand() % 10000 + 1000 << " bytes reviewed. \n \n";
+            while (8000 > number) {
+                cout << rand() % 10000 + 100000;
                 number = number + 1;
             }
         }
@@ -80,7 +78,7 @@ namespace general {
 
     int asklogic() {
         string q;
-        cout << "Admin>";
+        cout << "C:/Users/Admin>";
         cin >> q;
         if (q == "licence") {
             l::show();
@@ -92,9 +90,6 @@ namespace general {
         }
         else if (q == "record") {
             l::record();
-        }
-        else if (q == "version") {
-            version(1, 3, 5);
         }
         else {
             cout << "'" << q << "' is not a valid command. \n";
