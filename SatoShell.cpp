@@ -62,7 +62,7 @@ namespace general {
     int welcome() {
         cout << "\n";
         cout << "(c) 2020 Riverside Rocks. All rights reserved.\n";
-        cout << "Sato Shell / RCommand [v0.1.1]\n";
+        cout << "Sato Shell [v0.1.2]\n";
         cout << "For help, type help. For license details, please type licence.";
         return 0;
     }
